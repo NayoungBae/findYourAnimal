@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나와 닮은 동물 친구 찾기 MBTI 테스트</title>
+    <meta name="description" content="나와 꼭 닮은 동물을 MBTI 테스트 기반으로 추천해줍니다.">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="나와 닮은 동물 친구 찾기 MBTI 테스트">
+    <meta property="og:description" content="나와 꼭 닮은 동물을 MBTI 테스트 기반으로 추천해줍니다.">
+    <meta property="og:image" content="https://youranimal.netlify.app/images/cat.jpg">
+    <meta property="og:url" content="https://youranimal.netlify.app/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="나와 닮은 동물 친구 찾기 MBTI 테스트">
+    <meta name="twitter:description" content="나와 꼭 닮은 동물을 MBTI 테스트 기반으로 추천해줍니다.">
+    <meta name="twitter:image" content="https://youranimal.netlify.app/images/cat.jpg">
+    <meta name="twitter:domain" content="나와 닮은 동물 친구 찾기 MBTI 테스트">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="container">
+    <article class="start">
+        <h1 class="mt-5 text-center">나와 꼭 닮은 동물 친구 찾기!</h1>
+        <h4 class="mt-2 mb-5 text-center">나는 어떤 동물과 닮았을까..!?</h4>
+        <img id="main-img" src="images/hello.gif" alt="">
+        <button type="button" class="btn btn-warning mt-5 p-3 col-8 mx-auto" onclick="start();">테스트 시작하기</button>
+    </article>
+    <article class="question">
+        <div class="progress mt-4">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 25%"></div>
+        </div>
+        <div id="title-div" class="text-center mt-4">
+            <h4 id="title" class="text-center">문제</h4>
+        </div>
+        <img id="question-img1" class="question-img mt-4 mb-4" src="images/studycat.gif" alt="">
+        <img id="question-img2" class="question-img mt-4 mb-4" src="images/moviecat.gif" alt="">
+        <img id="question-img3" class="question-img mt-4 mb-4" src="images/typingcat.gif" alt="">
+        <img id="question-img4" class="question-img mt-4 mb-4" src="images/breathingcat.gif" alt="">
+        <img id="question-img5" class="question-img mt-4 mb-4" src="images/teachingdog.gif" alt="">
+        <img id="question-img6" class="question-img mt-4 mb-4" src="images/angrydog.gif" alt="">
+        <img id="question-img7" class="question-img mt-4 mb-4" src="images/tiredcat.gif" alt="">
+        <img id="question-img8" class="question-img mt-4 mb-4" src="images/surpriseddog.gif" alt="">
+        <img id="question-img9" class="question-img mt-4 mb-4" src="images/studyingdog.gif" alt="">
+        <img id="question-img10" class="question-img mt-4 mb-4" src="images/sadcat.gif" alt="">
+        <img id="question-img11" class="question-img mt-4 mb-4" src="images/travelingdog.gif" alt="">
+        <img id="question-img12" class="question-img mt-4 mb-4" src="images/restdog.gif" alt="">
+        <input id="type" type="hidden" value="EI">
+        <button id="A" type="button" class="btn btn-warning mt-4 p-4 col-8 mx-auto">Primary</button>
+        <button id="B" type="button" class="btn btn-warning mt-4 p-4 col-8 mx-auto">Primary</button>
+        <button id="back" type="button" class="btn btn-outline-secondary mt-4 p-4 col-8 mx-auto" onclick="back();">뒤로 가기</button>
+    </article>
+    <article class="result">
+        <img id="img" class="rounded mt-5" src="images/lion.jpg" alt="animal">
+        <h3 class="text-center mt-5">나와 꼭 닮은 동물은 <span id="animal">동물이름</span>!</h3>
+        <p class="text-center mt-5 mb-5 lh-base" id="explain">설명</p>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="addthis_inline_share_toolbox_eu2f text-center"></div>
+    </article>
+    <article class="mt-5 kakao_ad">
+        <ins class="kakao_ad_area" style="display:none;" 
+                data-ad-unit="DAN-nqPlFTkKsLwjT8ga" 
+                data-ad-width="320" 
+                data-ad-height ="100"></ins> 
+        <a class="mt-5 banner" href="https://www.codelion.net/catalog/Q291cnNlTm9kZTpqbW9r?utm_source=animal_test&utm_medium=web_lecture&utm_campaign=na0">
+            <img class="banner-img" src="images/banner.png" alt="banner">
+        </a> 
+    </article>
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <input type="hidden" id="EI" value="0">
+    <input type="hidden" id="SN" value="0">
+    <input type="hidden" id="TF" value="0">
+    <input type="hidden" id="JP" value="0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60dd99c809045a32"></script>
+</body>
+</html>

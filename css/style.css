@@ -1,0 +1,48 @@
+body {
+    background-image: url("/images/paper.jpg");
+}
+article {
+    display: flex;
+    flex-direction: column;
+}
+.question {
+    display: none;
+}
+#title-div {
+    height: 80px;
+}
+#title {
+    margin: auto 0;
+}
+#main-img, .question-img {
+    max-width: 70%;
+    height: 300px;
+    margin: 0 auto;
+}
+.result {
+    display: none;
+}
+#img {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+}
+#explain {
+    font-weight: bold;
+}
+.share {
+    margin: 0 auto;
+}
+.kakao_ad {
+    margin: 0 auto;
+    width: 320px;
+}
+.banner {
+    display: flex;
+    justify-content: center; /*자식요소에게 영향을 줌*/
+    width: 320px;
+    margin: 0 auto;
+}
+.banner-img {
+    width: 300px;
+}
